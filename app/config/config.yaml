@@ -1,0 +1,11 @@
+llm:
+  openai:
+    provider: "openai"
+    model_name: "gpt-4o-mini"  # Fixed model name
+  groq:
+    provider: "groq"
+    model_name: "llama3-8b-8192"  # Free model with good performance
+  # Alternative free models
+  huggingface:
+    provider: "huggingface"
+    model_name: "microsoft/DialoGPT-medium"
