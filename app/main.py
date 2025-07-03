@@ -22,7 +22,7 @@ class QueryRequest(BaseModel):
 @log_endpoint
 async def query_travel_agent(query: QueryRequest):
     logger.info(f"Received query: {query}")
-    graph = GraphBuilder(model_provider="groq")
+    graph = GraphBuilder(model_provider="google")
     react_app = graph()
 
     png_graph = react_app.get_graph().draw_mermaid_png()
@@ -44,5 +44,3 @@ async def query_travel_agent(query: QueryRequest):
 
     logger.info(f"Returning answer: {final_output}")
     return {"answer": final_output}
-    
-    

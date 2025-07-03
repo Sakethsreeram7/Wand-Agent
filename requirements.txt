@@ -9,6 +9,7 @@ pydantic
 httpx
 requests
 langchain_google_community
+langchain_google_genai
 langchain_tavily
 langchain_groq
 langchain_openai

@@ -9,7 +9,7 @@ from ..tools.expense_calculator_tool import CalculatorTool
 from ..tools.currency_conversion_tool import CurrencyConverterTool
 
 class GraphBuilder():
-    def __init__(self,model_provider: str = "groq"):
+    def __init__(self,model_provider: str = "google"):
         self.model_loader = ModelLoader(model_provider=model_provider)
         self.llm = self.model_loader.load_llm()
         
@@ -33,11 +33,25 @@ class GraphBuilder():
     
     
     def agent_function(self,state: MessagesState):
-        """Main agent function"""
+        """Main agent function with error handling"""
         user_question = state["messages"]
         input_question = [self.system_prompt] + user_question
-        response = self.llm_with_tools.invoke(input_question)
-        return {"messages": [response]}
+        
+        try:
+            response = self.llm_with_tools.invoke(input_question)
+            return {"messages": [response]}
+        except Exception as e:
+            # Handle rate limits and other API errors gracefully
+            error_message = f"I apologize, but I'm experiencing some technical difficulties: {str(e)}"
+            if "rate limit" in str(e).lower():
+                error_message = "I'm currently experiencing high demand. Please try again in a few moments."
+            elif "api" in str(e).lower():
+                error_message = "I'm having trouble connecting to my services. Please try again later."
+            
+            # Create a simple text response when tools fail
+            from langchain_core.messages import AIMessage
+            fallback_response = AIMessage(content=error_message)
+            return {"messages": [fallback_response]}
     def build_graph(self):
         graph_builder=StateGraph(MessagesState)
         graph_builder.add_node("agent", self.agent_function)

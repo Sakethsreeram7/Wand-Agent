@@ -1,11 +1,13 @@
 llm:
-  openai:
-    provider: "openai"
-    model_name: "gpt-4o-mini"  
+  google:
+    provider: "google"
+    model_name: "gemini-1.5-flash"
   groq:
     provider: "groq"
     model_name: "llama3-8b-8192" 
-
+  openai:
+    provider: "openai"
+    model_name: "gpt-4o-mini"  
   huggingface:
     provider: "huggingface"
     model_name: "microsoft/DialoGPT-medium"
