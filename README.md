@@ -6,7 +6,7 @@ A Python-based AI travel assistant that helps you plan trips with real-time data
 1. Clone the repo:
    ```sh
    git clone https://github.com/Sakethsreeram7/Wand-Agent.git
-   cd AI_Trip_Planner
+   cd Wand-Agent
    ```
 2. Install dependencies:
    ```sh
@@ -22,7 +22,7 @@ A Python-based AI travel assistant that helps you plan trips with real-time data
 ```sh
 curl -X POST http://localhost:8000/query \
   -H "Content-Type: application/json" \
-  -d '{"query": "Trip to Paris, 4 days, $1500 budget"}'
+  -d '{"query": "Trip to Goa, 4 days, in ₹15k budget"}'
 ```
 
 ## Project Structure
@@ -31,8 +31,6 @@ curl -X POST http://localhost:8000/query \
 - `requirements.txt` — Dependencies
 
 ## Environment Variables
+- `GOOGLE_API_KEY` (required)
 - `GROQ_API_KEY` (required)
 - `OPENWEATHERMAP_API_KEY` (optional)
-- `EXCHANGERATE_API_KEY` (optional)
-
-
