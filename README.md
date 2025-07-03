@@ -1,4 +1,4 @@
-# Wander Bot
+# Wand-Agent
 
 A Python-based AI travel assistant that helps you plan trips with real-time data and smart suggestions.
 
@@ -11,7 +11,7 @@ A Python-based AI travel assistant that helps you plan trips with real-time data
 ## Quick Start
 1. Clone the repo:
    ```sh
-   git clone https://github.com/your-username/AI_Trip_Planner.git
+   git clone https://github.com/Sakethsreeram7/Wand-Agent.git
    cd AI_Trip_Planner
    ```
 2. Install dependencies:
