@@ -1,18 +1,12 @@
-# Wander Bot
+# Wand-Agent
 
 A Python-based AI travel assistant that helps you plan trips with real-time data and smart suggestions.
-
-## Features
-- AI-powered itinerary planning
-- Real-time weather, currency, and place info
-- Budget and expense calculations
-- Streamlit UI and FastAPI backend
 
 ## Quick Start
 1. Clone the repo:
    ```sh
-   git clone https://github.com/your-username/AI_Trip_Planner.git
-   cd AI_Trip_Planner
+   git clone https://github.com/Sakethsreeram7/Wand-Agent.git
+   cd Wand-Agent
    ```
 2. Install dependencies:
    ```sh
@@ -28,23 +22,15 @@ A Python-based AI travel assistant that helps you plan trips with real-time data
 ```sh
 curl -X POST http://localhost:8000/query \
   -H "Content-Type: application/json" \
-  -d '{"query": "Trip to Paris, 4 days, $1500 budget"}'
+  -d '{"query": "Trip to Goa, 4 days, in ₹15k budget"}'
 ```
 
 ## Project Structure
 - `run.py` — Entry point
 - `app/` — Main code (agents, tools, UI, API)
 - `requirements.txt` — Dependencies
-- `test_components.py` — Component tests
 
 ## Environment Variables
+- `GOOGLE_API_KEY` (required)
 - `GROQ_API_KEY` (required)
 - `OPENWEATHERMAP_API_KEY` (optional)
-- `EXCHANGERATE_API_KEY` (optional)
-
-## License
-MIT License © 2025
-
-
-
-

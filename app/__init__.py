@@ -6,4 +6,4 @@ using free APIs for weather, place search, and currency conversion.
 """
 
 __version__ = "1.0.0"
-__author__ = "Praveen"
+__author__ = "Ram"

@@ -39,3 +39,9 @@ class WeatherInfoTool:
             return f"Could not fetch forecast for {city}"
     
         return [get_current_weather, get_weather_forecast]
+
+if __name__ == "__main__":
+    weather_tool = WeatherInfoTool()
+    tools = weather_tool.weather_tool_list
+    for tool in tools:
+        print(f"Tool: {tool.name}, Description: {tool.description}")
