@@ -15,8 +15,9 @@ A Python-based AI travel assistant that helps you plan trips with real-time data
 3. Set up API keys:
    -  Add `.env` and add your keys
 4. Run the app:
-   - Streamlit UI: `python run.py web` (http://localhost:8501)
-   - FastAPI API: `python run.py api` (http://localhost:8000)
+   1. FastAPI API: `python run.py api` (http://localhost:8000) (Mandatory)
+   2. Streamlit UI: `python run.py web` (http://localhost:8501)
+   
 
 ## API Example
 ```sh
