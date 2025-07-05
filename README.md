@@ -20,9 +20,17 @@ A Python-based AI travel assistant that helps you plan trips with real-time data
 
 ## API Example
 ```sh
-curl -X POST http://localhost:8000/query \
-  -H "Content-Type: application/json" \
-  -d '{"query": "Trip to Goa, 4 days, in ₹15k budget"}'
+curl -X 'POST' \
+  'http://localhost:8000/query' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Trip to Goa, 4 days, in ₹15k budget"
+    }
+  ]
+}'
 ```
 
 ## Project Structure

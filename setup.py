@@ -28,9 +28,9 @@ def get_requirements()->List[str]:
 print(get_requirements())
 
 setup(
-    name="ai-trip-planner",
+    name="wand-agent",
     version="1.0.0",
-    author="AI Trip Planner Team",
+    author="Wand Agent Team",
     author_email="contact@aitripplanner.com",
     description="An AI-powered trip planning application with modular architecture",
     long_description="A comprehensive travel planning application using AI agents with weather, place search, and currency conversion tools",
@@ -39,7 +39,7 @@ setup(
     python_requires=">=3.8",
     entry_points={
         "console_scripts": [
-            "ai-trip-planner=app.main:app",
+            "wand-agent=app.main:app",
         ],
     },
     classifiers=[

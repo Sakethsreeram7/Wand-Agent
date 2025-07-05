@@ -6,7 +6,25 @@ from fastapi.responses import JSONResponse
 import os
 from .logger.logging import log_endpoint, logger
 
-app=FastAPI()
+
+app = FastAPI()
+
+# Health check endpoint
+@app.get("/health")
+async def health_check():
+    return {"status": "ok"}
+
+# Default endpoint to show available endpoints
+@app.get("/")
+async def root():
+    return {
+        "endpoints": [
+            "/health",
+            "/query",
+            "/"
+        ],
+        "message": "Welcome to the Wand Agent API. See /docs for OpenAPI documentation."
+    }
 
 from typing import List, Literal, Optional
 

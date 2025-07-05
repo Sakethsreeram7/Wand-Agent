@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-AI Trip Planner - Main Entry Point
+Wand Agent - Main Entry Point
 
-This script serves as the main entry point for the AI Trip Planner application.
+This script serves as the main entry point for the Wand Agent application.
 It can run either the FastAPI backend server or the Streamlit web interface.
 """
 
@@ -18,7 +18,7 @@ def run_api_server():
     import uvicorn
     from app.main import app
     
-    print("🚀 Starting AI Trip Planner API Server...")
+    print("🚀 Starting Wand Agent API Server...")
     print("📍 API will be available at: http://localhost:8000")
     print("📖 API documentation at: http://localhost:8000/docs")
     
@@ -29,7 +29,7 @@ def run_streamlit_app():
     import subprocess
     import sys
     
-    print("🌍 Starting AI Trip Planner Web Interface...")
+    print("🌍 Starting Wand Agent Web Interface...")
     print("📍 Web app will be available at: http://localhost:8501")
     
     # Run streamlit with the app file
@@ -37,7 +37,7 @@ def run_streamlit_app():
     subprocess.run(cmd)
 
 def main():
-    parser = argparse.ArgumentParser(description="AI Trip Planner Application")
+    parser = argparse.ArgumentParser(description="Wand Agent Application")
     parser.add_argument(
         "mode", 
         choices=["api", "web", "streamlit"], 
